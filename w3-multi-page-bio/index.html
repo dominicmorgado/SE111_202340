@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="DM">
+    <meta name="description" content="W3 Multi Bio Page">
+
+    <title>W3 | Multi-Page Sites</title>
+
+    <!--IN DOCUMENT STYLING: can style all elements in page-->
+    <style>
+
+        /*we are now writing in CSS*/
+
+        /*SELECTION in CSS or Javascript:
+            selecting an element(s) within the page to do something with them (Styling, actions, applying buttons or functions)
+            
+            SELECTION can occur through three main ways:
+
+                *TAG NAME - all tags of this type take the style
+                
+                *ID Value - only the element with that id takes the style
+
+                *CLASS VALUE - 
+        
+        */
+
+        /*ANATOMY OF CSS CODE BLOCKS:
+
+            selector {
+                property: value;
+            }
+        */
+
+        div {/*applies to ALL divs in the page*/
+
+            border:1px solid black;
+            padding:10px; /*space added between element content and border*/
+            margin:5px; /*space added outside of element's border*/
+        }
+
+        #wrapper {/*select element by ID: only element with this id is affected*/
+            border:1px solid black;
+
+        }
+
+        .border {/*select elements by CLASS: only elements with this class value are affected [group]*/
+
+            border:2px solid darkslategrey
+            
+        }
+
+        #footer, #header, #nav {
+            text-align:center;
+        }
+
+    </style>
+
+
+    </head>
+<!--IN LINE STYLING: only applies to this specifc element (and its contents)-->
+<body style="background-color:rgb(192,191,191)">
+
+    <div id="wrapper">
+
+        <!--HEADER-->
+        <div id="header" class="bg">
+
+            <h1 id="title" class="bg">Dominic Morgado</h1>
+
+        </div><!--/ #header-->
+
+        <!--NAV-->
+        <div id="nav" class="bg">
+
+            <!--in-site relative links: to other pages we have made within the site-->
+            <a href="index.html">| HOME |</a>
+            <a href="">| BIO |</a>
+            <a href="">| SCHOOLS |</a>
+            <a href="">| HOBBIES |</a>
+
+            <br>
+
+        <!--external link: goes outside of site's domain-->
+        <a href="https://www.neit.edu" target="_blank">| NEIT Website |</a>
+        
+        <br>
+
+        <!--in page jump link: jumps to a section of a page [fragment]-->
+        <a href="footer">| BOTTOM OF PAGE |</a>
+
+        </div><!--/ #nav-->
+
+        <hr>
+
+        <!--CONTENT-->
+        <div id="content" class="border">
+
+            <h2><b>MAIN CONTENT</b></h2>
+
+            <!--RELATIVE IMAGE FILE ARE SAFEST-->
+
+            <img src="" alt="Picture of Myself" width="500px">
+
+        </div><!--/ #content-->
+
+        <hr>
+
+        <!--FOOTER-->
+        <div id="footer" class="bg">
+
+            <p>&copy;D MORGADO | SE111.02 | <span class="fancy">202340</span></p>
+            <br>
+            <a href="index.html#header">| Top of the HOME Page |</a>
+
+        </div><!--/ #footer-->
+
+    </div><!--/ #wrapper-->
+
+</body>
+</html>
