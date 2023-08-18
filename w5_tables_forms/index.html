@@ -6,12 +6,22 @@
     <!--Tells the -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="DM">
-    <meta name="description" content="W5 | Tables and Forms">
+    <meta name="description" content="W5 | Birthday Registration Form">
     
     <link type="text/css" rel="stylesheet" href="style.css">
 
-    <title>Week 5 | Tables and Forms</title>
+    <title>Week 5 | Birthday Registration Form</title>
+
 </head>
+
+<!--IN DOCUMENT CSS STLYING BELOW-->
+<style>
+    table, tr, td{
+        border:1px solid black;
+    }
+
+</style>
+
 <body>
     <!--Build your Table and Form here-->
     <h1> Birthday Party Registration Form</h1>
@@ -22,7 +32,7 @@
         <table>
 
             <!--table head <th> for column headers-->
-            <th>
+            <thead>
                 <tr><!--table row-->
 
                 <!--left column [labels]-->
@@ -36,7 +46,7 @@
                 </td>
 
                 </tr>
-            </th>
+            </thead>
 
             <!--table body <tbody> -REQUIRED for table content-->
             <tbody>
@@ -49,24 +59,15 @@
 
                     <!--right column [inputs]-->
                     <td>
-                        <input type="text" name="gfirst" id="g-first" placeholder="First Name" maxlength="20" required="">
+                        <input type="text" required="" maxlength="20" name="gfirst" id="g-first" placeholder="First Name"> <hr>
+
+                        <input type="text" required="" maxlength="20" name="glast" id="g-last" placeholder="Last Name">
                     </td>
+                    
 
                 </tr>
 
-                <tr><!--table row-->
-                    
-                    <!--left column [labels]-->
-                    <td>
-                        <label for=""></label>
-                    </td>
-
-                    <!--right column [inputs]-->
-                    <td>
-                        <input type="text" name="gfirst" id="g-last" placeholder="Last Name" maxlength="20" required="">
-                    </td>
-
-
+                
                 </tr>
 
                 <tr><!--table row-->
@@ -205,10 +206,10 @@
                 <!--right column [inputs]-->
                 <td>
                     <input type="checkbox" name="drink1" checked="true" value="coke">Coke <br>
-                    <input type="checkbox" name="drink2" checked="true" value="sprite">Sprite <br>
-                    <input type="checkbox" name="drink3" checked="true" value="fruit punch">Fruit Punch <br>
-                    <input type="checkbox" name="drink4" checked="true" value="lemonade">Lemonade <br>
-                    <input type="checkbox" name="drink5" checked="true" value="iced tea">Iced Tea <br>
+                    <input type="checkbox" name="drink2"  value="sprite">Sprite <br>
+                    <input type="checkbox" name="drink3"  value="fruit punch">Fruit Punch <br>
+                    <input type="checkbox" name="drink4"  value="lemonade">Lemonade <br>
+                    <input type="checkbox" name="drink5"  value="iced tea">Iced Tea <br>
                 </td>
 
             </tr>
@@ -311,6 +312,6 @@
 
     </form>
 
-    
+
 </body>
 </html>
