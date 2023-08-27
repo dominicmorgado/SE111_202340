@@ -27,14 +27,26 @@
         //in here, we write js
 
         //creating a variable -- keyword 'var'
+
+        hourly_pay = (prompt(`Please enter your hourly pay`));
+
+        hours_worked = (prompt(`Please enter number of hours worked: `));
+
+        gross_pay = hourly_pay * hours_worked
         
+        tax = gross_pay * 0.2;
 
+        net_pay = gross_pay - tax;
 
+        msg = `Gross Pay: $`+gross_pay.toFixed(2) + `\n`+
+              `Uncle Sam's Share: $`+tax.toFixed(2) +`\n`+
+              `Net Pay: $`+net_pay.toFixed(2);
 
+        alert(msg);
 
-
-
-
+        console.log(msg);
+            
+    
     </script>
 </body>
 </html>
