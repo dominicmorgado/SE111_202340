@@ -18,32 +18,30 @@
    <!--each <input> must have an id that matches its corresponding label -->
    <!--each form element is separated by a break space (new line) -->
     <form>
-        <label for="first">First Name: </label>
-        <input type="text" id="">
-
-        <br>
-
-        <label for="last">Last Name: </label>
-        <input type="text" id="">
-
-        <br>
-
-        <label for="hours">Hours Worked: </label>
-        <input type="text" id="">
-
-        <br>
-
-        <label for="rate">Hourly Rate: </label>
-        <input type="text" id="">
-
-        <br>
-
-        <br>
-
-
+        <table>
+            <tr>
+                <td><label for="first">First Name: </label></td>
+                <td><input type="text" id="first"></td>
+            </tr>
+            <tr>
+                <td><label for="last">Last Name: </label></td>
+                <td><input type="text" id="last"></td>
+            </tr>
+            <tr>
+                <td><label for="hours">Hours Worked: </label></td>
+                <td><input type="text" id="hours"></td>
+            </tr>
+            <tr>
+                <td><label for="rate">Hourly Rate: </label></td>
+                <td><input type="text" id="rate"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" id="enter-button" value="Enter"></td>
+            </tr>
+        </table>
 
         <!-- give the button below (that is the only form element without a label) an id of "enter-button"-->
-        <input type="button" id="" value="Enter">
+
 
         <br>
         <br>
@@ -69,15 +67,13 @@
 
     <script>
         //edit the below statement to select the #enter-button id from the HTML file
-        document.querySelector().addEventListener(`click`, alertName)
-        
-        
+        document.querySelector('#enter-button').addEventListener(`click`, alertName)
 
         function alertName(e)
         {
             //get each *value* from the form elements (first name, last name, hours worked, hourly rate) and store them into vars
 
-            /*USE THE FOLLOWING VARIABLE NAMES:
+            /* USE THE FOLLOWING VARIABLE NAMES:
             fname --> first name, #first
             lname --> last name, #last
             hours --> hours worked, #hours
@@ -87,28 +83,29 @@
             var lname = document.querySelector(`#last`).value
             var hours = document.querySelector(`#hours`).value
             var rate = document.querySelector(`#rate`).value
-            
+
 
 
             //console.log() all four values
-            
+
             console.log(fname)
             console.log(lname)
             console.log(hours)
             console.log(rate)
 
             //add the first and last name values together and store into a new variable called 'full' holding the user's full name
-            var full 
+            var full = fname + ' '+lname
 
             //console.log() the full name value
-            console.log()
+            console.log(full)
 
 
             //convert both hours and rate to Number() data types
-            hours
+            hours = parseFloat(hours)
+            rate = parseFloat(rate)
 
 
-            //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build! 
+            //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build!
 
             //create gross, taxAmount, net variables and store corresponding data to them
             //use a tax percentage of 20% (.2)
@@ -120,10 +117,10 @@
             console.log(`${gross.toFixed(2)}\n${taxAmount.toFixed(2)}\n${taxAmount.toFixed(2)}`)
 
 
-            //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
-            var finalMessage = ``
+            //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place
+            var finalMessage = `Full Name: ${full}<br>Hours Worked: ${hours.toFixed(2)}<br>Hourly Rate: $${rate.toFixed(2)}`
 
-        
+
             //create a new var called 'info' and store the entire #info *HTML element* to it
             var info = document.querySelector(`#info`)
 
@@ -140,8 +137,8 @@
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
-            document.querySelector{`#submit`} .addEventListener{`click`, submitNow}
-        
+            document.querySelector(`#submit`).addEventListener(`click`,submitNow)
+
             function submitNow(e)
             {
 
@@ -150,7 +147,7 @@
 
                 alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
             }
-            
+
         }
         
     </script>
